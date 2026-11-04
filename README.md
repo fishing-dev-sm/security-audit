@@ -13,10 +13,45 @@
 
 ## 安装
 
-将本仓库克隆到 Pi 的 skills 目录：
+### 面向 Agent 的安装
+
+#### Pi
+
+将本仓库克隆到 Pi 的 skills 目录，Agent 会自动识别 `SKILL.md`：
 
 ```bash
 git clone https://github.com/fishing-dev-sm/security-audit.git ~/.agents/skills/security-audit
+```
+
+#### Claude Code
+
+Claude Code 使用 `.claude/skills/` 目录加载自定义 skill：
+
+```bash
+git clone https://github.com/fishing-dev-sm/security-audit.git ~/.claude/skills/security-audit
+```
+
+#### Cursor
+
+Cursor 可通过 `.cursor/rules/` 引入审核规则。将 `SKILL.md` 与 `references/checklist.md` 合并为规则文件：
+
+```bash
+git clone https://github.com/fishing-dev-sm/security-audit.git /tmp/security-audit
+cat /tmp/security-audit/SKILL.md /tmp/security-audit/references/checklist.md > .cursor/rules/security-audit.md
+```
+
+#### 通用 Agent 框架
+
+对于支持自定义 system prompt 或知识库的 Agent（如 LangChain、AutoGen、自研框架），可将本仓库作为外部知识库挂载，或在 prompt 中引用 `SKILL.md` 的审核流程与 `references/checklist.md` 的检查清单。
+
+### 作为独立脚本工具
+
+如果只需要命令行扫描功能，克隆后即可直接运行：
+
+```bash
+git clone https://github.com/fishing-dev-sm/security-audit.git
+cd security-audit
+bash scripts/quick_scan.sh /path/to/target-project
 ```
 
 ## 使用方法
