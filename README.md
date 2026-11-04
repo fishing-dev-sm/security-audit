@@ -56,7 +56,7 @@ bash scripts/quick_scan.sh /path/to/target-project
 
 ## 使用方法
 
-在 Pi 会话中直接要求审核目标项目：
+在支持该 Skill 的 Agent 会话中，直接要求审核目标项目：
 
 ```
 审核 https://github.com/some/project 的安全性
