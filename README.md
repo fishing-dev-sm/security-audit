@@ -39,14 +39,6 @@ git clone https://github.com/fishing-dev-sm/security-audit.git .agents/skills/se
 git clone https://github.com/fishing-dev-sm/security-audit.git ~/.agents/skills/security-audit
 ```
 
-#### Claude Code
-
-Claude Code 使用 `.claude/skills/` 目录加载自定义 skill：
-
-```bash
-git clone https://github.com/fishing-dev-sm/security-audit.git ~/.claude/skills/security-audit
-```
-
 #### Cursor
 
 Cursor 可通过 `.cursor/rules/` 引入审核规则。将 `SKILL.md` 与 `references/checklist.md` 合并为规则文件：
