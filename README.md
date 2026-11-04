@@ -23,6 +23,22 @@
 git clone https://github.com/fishing-dev-sm/security-audit.git ~/.agents/skills/security-audit
 ```
 
+#### DeepSeek Harness
+
+DeepSeek Harness 支持项目级和用户级 skill 目录：
+
+**项目级**（推荐，仅对当前项目生效）：
+
+```bash
+git clone https://github.com/fishing-dev-sm/security-audit.git .agents/skills/security-audit
+```
+
+**用户级**（对所有项目生效）：
+
+```bash
+git clone https://github.com/fishing-dev-sm/security-audit.git ~/.agents/skills/security-audit
+```
+
 #### Claude Code
 
 Claude Code 使用 `.claude/skills/` 目录加载自定义 skill：
